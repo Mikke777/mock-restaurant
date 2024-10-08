@@ -1,19 +1,18 @@
-/* src/components/Navbar.css */
-
 .navbar {
   background-color: white;
   padding: 1rem;
-  margin-right: 10rem;
-  margin-left: 10rem;
+  position: relative;
+  z-index: 1000;
+  margin: 1em 10em 1em;
 }
 
 .navbar-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
 
-/* Style for the unordered list in the navbar */
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -21,12 +20,11 @@ nav ul {
   display: flex;
 }
 
-/* Style for list items */
 nav li {
   margin: 0 15px;
 }
 
-/* Style for anchor links */
+
 nav a {
   color: black;
   text-decoration: none;
@@ -34,50 +32,56 @@ nav a {
   transition: color 0.3s, text-decoration 0.3s;
 }
 
-/* Change on hover */
 nav a:hover {
-  text-decoration: underline; /* Add underline effect on hover */
+  text-decoration: underline;
 }
 
 .App-logo {
   height: 2.5rem;
-  pointer-events: none; /* Prevent pointer events on the logo */
+  pointer-events: none;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
-  nav {
-    margin-right: 1rem; /* Reduce margin on smaller screens */
-    margin-left: 1rem; /* Reduce margin on smaller screens */
+
+  .navbar {
+    margin: 0;
   }
 
   .nav-links {
-    display: none; /* Hide menu by default */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    width: 100%; /* Full width on mobile */
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 0.5s ease;
+    z-index: 999;
+    width: 8rem;
   }
 
   .nav-links.active {
-    display: flex; /* Show menu when active */
+    max-height: 200px;
+    opacity: 1;
+    width: 8rem;
   }
 
   nav ul {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 
   nav li {
-    margin: 10px 0; /* Add margin between items in the vertical list */
+    margin: 0;
   }
 
   .menu-icon {
-    display: block; /* Show the menu icon on mobile */
-    cursor: pointer; /* Change cursor to pointer */
+    display: block;
+    cursor: pointer;
   }
 }
 
 @media (min-width: 769px) {
   .menu-icon {
-    display: none; /* Hide the menu icon on larger screens */
+    display: none;
   }
 }

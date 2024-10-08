@@ -1,0 +1,30 @@
+.highlights-section {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.highlights-content {
+  margin-bottom: 2rem;
+}
+
+.highlights-text-ancor {
+  display: flex;
+  color: var(--secondary-color);
+  justify-content: space-between;
+}
+
+.highlights-text-ancor a {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  transition: color 0.3s;
+  padding: 10px;
+  border-radius: 16px;
+  vertical-align: middle;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
