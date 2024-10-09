@@ -1,0 +1,33 @@
+.about-section {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem;
+}
+
+.about-section h1 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.about-content {
+  display: flex;
+}
+
+.about-content p {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 2rem;
+  align-self: center;
+}
+
+.about-image {
+  padding-right: 0.5rem;
+}
+
+.about-image img {
+  max-width: 50rem;
+  height: auto;
+  border-radius: 16px;
+}
