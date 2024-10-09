@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   padding: 5rem;
   padding-top: 0;
-  max-height: 23rem;
+  max-height: 15rem;
 }
 
 .hero-content {
@@ -37,7 +37,7 @@
 
 
 .hero-image {
-  max-width: 20rem;
+  max-width: 15rem;
   height: auto;
   overflow: hidden;
   margin-top: 1rem;
