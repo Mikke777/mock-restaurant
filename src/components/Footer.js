@@ -31,9 +31,8 @@ const Footer = () => {
         <div className="social-media">
           <h3>Follow Us</h3>
           <ul>
-            <li><a href="#" aria-label="Follow us on Facebook">Facebook</a></li>
-            <li><a href="#" aria-label="Follow us on Instagram">Instagram</a></li>
-            <li><a href="#" aria-label="Follow us on Twitter">Twitter</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
           </ul>
         </div>
       </div>
