@@ -1,0 +1,62 @@
+.order-online-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.menu-cards {
+  display: flex;
+}
+
+.dishes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 96%;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.dish-card h2 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.dish-card p {
+  align-items: baseline;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.dish-card button {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding: 0.5rem 1rem;
+  align-items: left;
+}
+
+.dish-card button:hover {
+  transform: scale(1.1);
+}
+
+.cart {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 20px; /* Distance from the top of the viewport */
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 20%;
+}
