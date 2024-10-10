@@ -2,7 +2,7 @@ import React from 'react';
 import './HeroSection.css';
 import heroimg from './images/restauranfood.jpg';
 
-const HeroSection = () => {
+const HeroSection = ({ onSectionChange }) => {
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -13,7 +13,7 @@ const HeroSection = () => {
             focused on traditional recipes served with a modern twist.
           </p>
           <div className="hero-button">
-            <a href="#reservations">Book a Table</a>
+            <button onClick={() => onSectionChange('reservations')}>Book a Table</button>
           </div>
         </div>
         <div className="hero-image">

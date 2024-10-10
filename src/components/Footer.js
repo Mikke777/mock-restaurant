@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import logo from './images/logo-lemon.png';
 
-const Footer = () => {
+const Footer = ({ onSectionChange }) => {
   return (
     <footer className="footer-section">
       <div className="footer-content">
@@ -13,11 +13,11 @@ const Footer = () => {
         <div className="links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#reservations">Reservations</a></li>
-            <li><a href="#order-online">Order Online</a></li>
+            <li><button onClick={() => onSectionChange('home')}>Home</button></li>
+            <li><button onClick={() => onSectionChange('about')}>About</button></li>
+            <li><button onClick={() => onSectionChange('menu')}>Menu</button></li>
+            <li><button onClick={() => onSectionChange('reservations')}>Reservations</button></li>
+            <li><button onClick={() => onSectionChange('order-online')}>Order Online</button></li>
           </ul>
         </div>
 

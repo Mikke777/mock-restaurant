@@ -26,13 +26,19 @@
   padding: 0;
 }
 
-.links a, .social-media a, .contact-info a {
+.links button, .social-media a, .contact-info a {
   text-decoration: none;
   color: var(--black-color);
   transition: color 0.3s;
 }
 
-.links a:hover, .social-media a:hover {
+.links button {
+  border: none;
+  background-color: var(--footer-color);
+  cursor: pointer;
+}
+
+.links button:hover, .social-media a:hover {
   color: var(--primary-color);
 }
 

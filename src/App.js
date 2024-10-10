@@ -5,18 +5,20 @@ import HeroSection from './components/HeroSection';
 import Highlights from './components/Highlights';
 import Testimonials from './components/Testimonials';
 import About from './components/About';
-import Menu from './components/Menu'; // Import the Menu component
+import Menu from './components/Menu';
+import Reservations from './components/Reservations';
 import Footer from './components/Footer';
+import OrderOnline from './components/OrderOnline';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home'); // State to track current section
+  const [currentSection, setCurrentSection] = useState('home');
 
   const renderSection = () => {
     switch (currentSection) {
       case 'home':
         return (
           <>
-            <HeroSection />
+            <HeroSection onSectionChange={setCurrentSection} />
             <Highlights />
             <Testimonials />
             <About />
@@ -27,23 +29,23 @@ function App() {
       case 'menu':
         return <Menu />;
       case 'reservations':
-        return <div>Reservations Component</div>; // Replace with actual component
+        return <Reservations />;
       case 'order-online':
-        return <div>Order Online Component</div>; // Replace with actual component
+        return <OrderOnline />;
       case 'login':
-        return <div>Login Component</div>; // Replace with actual component
+        return <div>Login Component</div>;
       default:
-        return <HeroSection />;
+        return <HeroSection onSectionChange={setCurrentSection} />;
     }
   };
 
   return (
     <div className="App">
-      <Navbar onSectionChange={setCurrentSection} /> {/* Pass down the setCurrentSection function */}
+      <Navbar onSectionChange={setCurrentSection} />
       <div id="home">
-        {renderSection()} {/* Render the current section */}
+        {renderSection()}
       </div>
-      <Footer />
+      <Footer onSectionChange={setCurrentSection} />
     </div>
   );
 }

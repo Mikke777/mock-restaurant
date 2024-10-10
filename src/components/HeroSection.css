@@ -28,12 +28,21 @@
   text-align: right;
 }
 
-.hero-button a {
+.hero-button button {
   padding: 1rem;
   background-color: var(--secondary-color);
   color: white;
   border-radius: 16px;
   text-decoration: none;
+  border: var(--black-color) solid 1px;
+  cursor: pointer;
+  color: var(--black-color);
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.hero-button button:hover {
+  transform: scale(1.1);
 }
 
 
