@@ -23,6 +23,5 @@ export const fetchAPI = function (date) {
 };
 
 export const submitAPI = function (formData) {
-  // Simulate successful submission
   return true;
 };

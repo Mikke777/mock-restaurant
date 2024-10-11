@@ -1,71 +1,80 @@
 .highlights-section {
-  margin-top: 5rem;
+  margin-top: 10rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .highlights-content {
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .highlights-text-ancor {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .highlights-text-ancor h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--black-color);
+  flex: 1;
+  text-align: center;
+  margin: 0 1rem;
 }
 
-.highlights-text-ancor a {
+.highlights-text-ancor button {
   text-decoration: none;
   background-color: var(--secondary-color);
   color: var(--black-color);
-  padding: 1.2rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding: 1.2rem 2rem;
   border-radius: 16px;
   font-weight: bold;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.highlights-text-ancor button:hover {
+  transform: scale(1.1);
 }
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .card-highlight {
   background-color: var(--card-color);
   padding: 1rem;
-  padding-top: 0;
-  padding-right: 0;
-  padding-left: 0;
   border-radius: 16px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  max-width: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .card-highlight img {
   width: 100%;
   border-radius: 16px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   height: 10rem;
+  object-fit: cover;
 }
 
 .card-title-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin: 0 1rem 0.5rem;
 }
 
 .card-title-price h3 {
@@ -79,21 +88,50 @@
 
 .card-description {
   flex-grow: 1;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin: 0 1rem 1rem;
   color: rgb(47, 47, 47);
 }
 
 .order-now {
   display: flex;
-  justify-content:last baseline;
+  justify-content: flex-end;
   margin-top: auto;
   margin-right: 1rem;
-  margin-left: 1rem;
 }
 
-.order-now a {
+.order-now  button{
   text-decoration: none;
   color: var(--black-color);
+  border: none;
+  background-color: var(--card-color);
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .highlights-text-ancor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlights-text-ancor h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlights-text-ancor button {
+    padding: 0.8rem 1rem;
+    width: 100%;
+  }
+
+  .card-highlight {
+    padding: 0 1rem;
+  }
+
+  .card-title-price {
+    margin: 0 0 0.5rem;
+  }
+
+  .card-description {
+    margin: 0 0 1rem;
+  }
 }

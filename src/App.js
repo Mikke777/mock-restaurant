@@ -9,6 +9,7 @@ import Menu from './components/Menu';
 import Reservations from './components/Reservations';
 import Footer from './components/Footer';
 import OrderOnline from './components/OrderOnline';
+import Login from './components/Login';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -19,7 +20,7 @@ function App() {
         return (
           <>
             <HeroSection onSectionChange={setCurrentSection} />
-            <Highlights />
+            <Highlights onSectionChange={setCurrentSection} />
             <Testimonials />
             <About />
           </>
@@ -33,7 +34,7 @@ function App() {
       case 'order-online':
         return <OrderOnline />;
       case 'login':
-        return <div>Login Component</div>;
+        return <Login onSectionChange={setCurrentSection} />;
       default:
         return <HeroSection onSectionChange={setCurrentSection} />;
     }

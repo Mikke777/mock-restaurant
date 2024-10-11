@@ -6,13 +6,13 @@ import Ldes from './images/lemon dessert.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
 
-const Highlights = () => {
+const Highlights = ({ onSectionChange }) => {
   return (
     <section className="highlights-section">
       <div className="highlights-content">
         <div className="highlights-text-ancor">
           <h1>This week specials!</h1>
-          <a href="#menu">Online Menu</a>
+          <button onClick={() => onSectionChange('menu')}>Online Menu</button>
         </div>
         <div className="highlights-grid">
           <div className="card-highlight">
@@ -31,7 +31,7 @@ const Highlights = () => {
               </p>
             </div>
             <div className='order-now'>
-              <a href='#order-online'>Order now <FontAwesomeIcon icon={faTruck} /></a>
+              <button onClick={() => onSectionChange('order-online')}>Order now <FontAwesomeIcon icon={faTruck} /></button>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Highlights = () => {
               </p>
             </div>
             <div className='order-now'>
-              <a href='#order-online'>Order now <FontAwesomeIcon icon={faTruck} /></a>
+              <button onClick={() => onSectionChange('order-online')}>Order now <FontAwesomeIcon icon={faTruck} /></button>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ const Highlights = () => {
               </p>
             </div>
             <div className='order-now'>
-              <a href='#order-online'>Order now <FontAwesomeIcon icon={faTruck} /></a>
+              <button onClick={() => onSectionChange('order-online')}>Order now <FontAwesomeIcon icon={faTruck} /></button>
             </div>
           </div>
         </div>

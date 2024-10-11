@@ -5,4 +5,7 @@
   --black-color: #333333;
   --price-color: #EE9972;
   --footer-color: #FBDABB;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

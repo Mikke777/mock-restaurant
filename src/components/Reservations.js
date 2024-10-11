@@ -12,6 +12,7 @@ const Reservations = () => {
         occasion: 'Birthday',
         date: '',
         time: '',
+        numberOfPersons: 1,
     });
 
     const [availableTimes, setAvailableTimes] = useState([]);
@@ -36,32 +37,32 @@ const Reservations = () => {
     };
 
     const handleSubmit = (e) => {
-      e.preventDefault();
+        e.preventDefault();
 
-      const isBooked = reservations.some(
-          (reservation) => reservation.date === formData.date && reservation.time === formData.time
-      );
+        const isBooked = reservations.some(
+            (reservation) => reservation.date === formData.date && reservation.time === formData.time
+        );
 
-      if (isBooked) {
-          Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'This time slot is already booked. Please select another time.',
-          });
-          return;
-      }
+        if (isBooked) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'This time slot is already booked. Please select another time.',
+            });
+            return;
+        }
 
-      const newReservations = [...reservations, formData];
-      setReservations(newReservations);
-      localStorage.setItem('reservations', JSON.stringify(newReservations));
+        const newReservations = [...reservations, formData];
+        setReservations(newReservations);
+        localStorage.setItem('reservations', JSON.stringify(newReservations));
 
-      Swal.fire({
-          icon: 'success',
-          title: 'Success!',
-          text: 'Your reservation was submitted!',
-      });
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'Your reservation was submitted!',
+        });
 
-      resetForm();
+        resetForm();
     };
 
     const resetForm = () => {
@@ -73,6 +74,7 @@ const Reservations = () => {
             occasion: 'Birthday',
             date: '',
             time: '',
+            numberOfPersons: 1,
         });
         setAvailableTimes([]);
     };
